@@ -43,7 +43,7 @@ router.put('/:id', checkId, checkProjectUpdates, (req, res, next) => {
             res.status(200).json(updates);
         })
         .catch(err => {
-            next(err);
+            next([err]);
         })
 })
 
